@@ -1,0 +1,32 @@
+{
+  "name": "pyrameter-server",
+  "version": "1.0.0",
+  "description": "Pyrameter Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "build_docs": "npx ag --force-write ./asyncapi.yaml @asyncapi/html-template -o docs"
+  },
+  "author": "MAKinteract",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@types/serialport": "^8.0.2",
+    "@types/temp": "^0.9.1",
+    "console-error": "^0.0.4",
+    "console-info": "^0.0.5",
+    "console-warn": "^0.0.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "serialport": "^9.2.8",
+    "socket.io": "^4.7.4",
+    "temp": "^0.9.4",
+    "tree-sitter": "^0.20.6",
+    "tree-sitter-pyrameter": "github:makinteract/pyrameter-grammar"
+  }
+}
