@@ -8,6 +8,7 @@ console.info(`listening on port ${PORT}`);
 
 io.on('connection', function (socket) {
   emitInfo(socket, 'Client connected to server');
+  console.log('connected');
 
   // On disconnect
   socket.on(
